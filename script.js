@@ -48,17 +48,15 @@ function getRandomQuote() {
 // Get Quotes From API
 async function getQuotes() {
     showLoadingSpinner();
-    apiQuotes = localQuotes;
-    getRandomQuote()
-//     const apiUrl = 'https://type.fit/api/quotes';
-//     try {
-//         const response = await fetch(apiUrl);
-//         apiQuotes = await response.json();
-//         getRandomQuote()
-//     } catch (error) {
-//         //Catch Error Here
-//         console.log(error)
-//     }
+    const apiUrl = 'https://mocki.io/v1/b9b2b14f-f9e5-4c31-98cf-f50990a6bf84';
+    try {
+        const response = await fetch(apiUrl);
+        apiQuotes = await response.json();
+        getRandomQuote()
+    } catch (error) {
+        //Catch Error Here
+        console.log(error)
+    }
 }
 
 //Tweet Quote
