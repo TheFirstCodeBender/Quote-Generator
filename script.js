@@ -48,15 +48,17 @@ function getRandomQuote() {
 // Get Quotes From API
 async function getQuotes() {
     showLoadingSpinner();
-    const apiUrl = 'https://type.fit/api/quotes';
-    try {
-        const response = await fetch(apiUrl);
-        apiQuotes = await response.json();
-        getRandomQuote()
-    } catch (error) {
-        //Catch Error Here
-        console.log(error)
-    }
+    apiQuotes = localQuotes;
+    getRandomQuote()
+//     const apiUrl = 'https://type.fit/api/quotes';
+//     try {
+//         const response = await fetch(apiUrl);
+//         apiQuotes = await response.json();
+//         getRandomQuote()
+//     } catch (error) {
+//         //Catch Error Here
+//         console.log(error)
+//     }
 }
 
 //Tweet Quote
